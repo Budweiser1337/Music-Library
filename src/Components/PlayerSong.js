@@ -78,6 +78,7 @@ const Player = ({
           setIsPlaying(!isPlaying);
         } else {
           audioRef.current.src = currentSong.audio;
+          audioRef.current.currentTime = songInfo.currentTime; 
           audioRef.current.play();
           setIsPlaying(!isPlaying);
         }
